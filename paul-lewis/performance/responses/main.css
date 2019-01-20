@@ -1,0 +1,10 @@
+div.colored-box {
+    margin: 1rem;
+    height: 500px;
+    width: 500px;
+    background: royalblue;
+}
+
+div.colored-box.changed {
+    background: violet;
+}
