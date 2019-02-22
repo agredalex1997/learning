@@ -1,5 +1,5 @@
 /**
- * Return true if the strings are anagram, false otherwise
+ * Return true if the strings are anagrams, false otherwise
  *
  * @param {string} str1 some string
  * @param {string} str2 some string
