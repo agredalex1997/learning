@@ -7,5 +7,11 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Alex Agreda",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "uuid": "^3.3.2"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.10"
+    }
 }

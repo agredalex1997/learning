@@ -72,14 +72,51 @@ class LinkedList {
 
         this.length++;
     }
+
+    *[Symbol.iterator]() {
+        let node = this.head;
+
+        while (node !== null) {
+            yield node;
+
+            node = node.next;
+        }
+    }
 }
 
+function linkedListToReversedNumber(linkedList) {
+    if (linkedList === null) {
+        return;
+    }
 
-linkedList = new LinkedList(1);
-linkedList.appendToTail(2);
-linkedList.appendToTail(3);
-linkedList.appendToTail(4);
-linkedList.appendToTail(3);
-linkedList.deleteNode(3);
+    let strNumber = "";
 
-console.log(linkedList);
+    for (let digit of linkedList) {
+        strNumber += digit.data;
+    }
+
+    strNumber = strNumber.split("").reverse().join("");
+    return parseInt(strNumber);
+}
+
+function sumLinkedLists(linkedList1, linkedList2) {
+    if (linkedList1 === null || linkedList2 === null) {
+        throw new Exception("One of the parameters is null");
+    }
+
+    if (linkedList1.length !== linkedList2.length) {
+        throw new Error("Both linked lists must have the same length");
+    }
+
+    return linkedListToReversedNumber(linkedList1) + linkedListToReversedNumber(linkedList2);
+}
+
+let number1 = new LinkedList(3);
+number1.appendToTail(1);
+number1.appendToTail(5);
+
+let number2 = new LinkedList(5);
+number2.appendToTail(9);
+number2.appendToTail(2);
+
+console.log(sumLinkedLists(number1, number2));
