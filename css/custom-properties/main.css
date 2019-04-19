@@ -1,0 +1,23 @@
+:root {
+    --first-color: yellow;
+    --second-color: blue;
+}
+
+#firstParagraph {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+#secondParagraph {
+    background-color: var(--first-color);
+    color: var(--second-color);
+}
+
+#container {
+    --second-color: green;
+}
+
+#thirdParagraph {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
