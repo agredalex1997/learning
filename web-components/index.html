@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>web components</title>
     <script src="./main.js" defer></script>
+    <script src="./modal-dialog.js" defer></script>
 </head>
 
 <body>
-    <template>
+    <template id="modal-dialog">
         <script>
             document.getElementById('launch-dialog').addEventListener('click', e => {
                 const wrapper = document.querySelector('.wrapper');
@@ -67,6 +68,7 @@
                 max-width: 600px;
                 padding: 1rem;
                 position: fixed;
+                border-radius: 1rem;
             }
 
             button {
@@ -76,10 +78,6 @@
                 position: absolute;
                 top: 1rem;
                 right: 1rem;
-            }
-
-            button:focus {
-                border: 2px solid blue;
             }
         </style>
 
@@ -96,6 +94,8 @@
     </template>
 
     <button id="launch-dialog">Launch dialog</button>
+
+    <modal-dialog></modal-dialog>
 </body>
 
 </html>
